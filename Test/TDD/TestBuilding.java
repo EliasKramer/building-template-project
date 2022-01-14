@@ -57,10 +57,10 @@ public class TestBuilding {
         String resident = "hans";
         Building b = new Building(0,resident);
 
-        Assertions.assertEquals(1,b.getResidentNumber());
+        Assertions.assertEquals(1,b.numberOfResidents());
 
         b.AddResident("hans");
-        Assertions.assertEquals(1,b.getResidentNumber());
+        Assertions.assertEquals(1,b.numberOfResidents());
     }
 
     @Test
@@ -69,9 +69,33 @@ public class TestBuilding {
         String resident = "hans";
         Building b = new Building(0,resident);
 
-        Assertions.assertEquals(1,b.getResidentNumber());
+        Assertions.assertEquals(1,b.numberOfResidents());
 
         b.RemResident("hans");
-        Assertions.assertEquals(0,b.getResidentNumber());
+        Assertions.assertEquals(0,b.numberOfResidents());
+    }
+
+    @Test
+    public void testSilentFailIfMultibleTimesRemoved()
+    {
+        String resident = "hans";
+        Building b = new Building(0,resident);
+
+        Assertions.assertEquals(1,b.numberOfResidents());
+
+        b.RemResident("hans");
+        Assertions.assertEquals(0,b.numberOfResidents());
+
+
+        b.RemResident("hans");
+        Assertions.assertEquals(0,b.numberOfResidents());
+    }
+    @Test
+    public void TestGetId()
+    {
+        String resident = "hans";
+        Building b = new Building(0,resident);
+
+        Assertions.assertEquals(0,b.getId());
     }
 }

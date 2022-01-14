@@ -2,20 +2,21 @@ package TDD;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class Building {
-    ArrayList<String> _residents;
+    private int _id;
+    private ArrayList<String> _residents;
     public Building (int id, String initialResident)
     {
         _residents = new ArrayList<>();
         _residents.add(initialResident);
-
+        _id = id;
     }
     public Building (int id, String[] residents)
     {
         _residents = new ArrayList<>();
         _residents.addAll(Arrays.asList(residents));
+        _id = id;
     }
 
     public String getLastResident()
@@ -29,12 +30,19 @@ public class Building {
             _residents.add(s);
         }
     }
-    public int getResidentNumber()
+    public int numberOfResidents()
     {
         return _residents.size();
     }
     public void RemResident(String s)
     {
-        _residents.remove(s);
+        if(_residents.contains(s))
+        {
+            _residents.remove(s);
+        }
+    }
+    public int getId()
+    {
+        return 0;
     }
 }
