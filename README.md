@@ -1,4 +1,4 @@
-# Template Repo for Building
+# Template Repo for TDD.Building
 In case you fail to init your own repo you may use this repo. Follow the procedure:
 
 1. Fork this repo into your own name space
