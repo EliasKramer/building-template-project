@@ -98,4 +98,18 @@ public class TestBuilding {
 
         Assertions.assertEquals(0,b.getId());
     }
+
+    @Test
+    public void TestGetMoreId()
+    {
+        String resident = "hans";
+        Building b = new Building(0,resident);
+
+        Assertions.assertEquals(0,b.getId());
+
+        String resident2 = "hans";
+        Building b2 = new Building(1,resident2);
+
+        Assertions.assertEquals(1,b2.getId());
+    }
 }

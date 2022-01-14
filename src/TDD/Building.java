@@ -43,6 +43,6 @@ public class Building {
     }
     public int getId()
     {
-        return 0;
+        return _id;
     }
 }
