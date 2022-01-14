@@ -18,12 +18,12 @@ public class Building {
         _residents.addAll(Arrays.asList(residents));
     }
 
-    public String getFirstResident()
+    public String getLastResident()
     {
-        return _residents.get(0);
+        return _residents.get(_residents.size()-1);
     }
     public void AddResident(String s)
     {
-        
+        _residents.add(s);
     }
 }
