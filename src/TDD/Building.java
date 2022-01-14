@@ -5,5 +5,13 @@ public class Building {
     {
 
     }
+    public Building (int id, String[] residents)
+    {
 
+    }
+
+    public String getResidents()
+    {
+        return "hans";
+    }
 }

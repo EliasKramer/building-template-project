@@ -11,6 +11,14 @@ public class TestBuilding {
         Building b = new Building(0,resident);
 
         String[] residents = {"hans","peter","paul"};
-        Building b = new Building(1,residents);
+        Building b1 = new Building(1,residents);
+    }
+    @Test
+    public void testGetResident()
+    {
+        String resident = "hans";
+        Building b = new Building(0,resident);
+
+        Assertions.assertEquals(resident,b.getResidents());
     }
 }
