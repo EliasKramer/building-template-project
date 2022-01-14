@@ -33,4 +33,8 @@ public class Building {
     {
         return _residents.size();
     }
+    public void RemResident(String s)
+    {
+        _residents.remove(s);
+    }
 }
