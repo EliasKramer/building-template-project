@@ -22,4 +22,8 @@ public class Building {
     {
         return _residents.get(0);
     }
+    public void AddResident(String s)
+    {
+        
+    }
 }

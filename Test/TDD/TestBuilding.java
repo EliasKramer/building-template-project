@@ -40,4 +40,14 @@ public class TestBuilding {
 
         Assertions.assertEquals(resident,b.getFirstResident());
     }
+
+    @Test
+    public void testGetMultibleResidentsViaMethod()
+    {
+        String resident = "hans";
+        Building b = new Building(0,resident);
+        b.AddResident("hans2");
+
+        Assertions.assertEquals("hans2",b.getFirstResident());
+    }
 }
