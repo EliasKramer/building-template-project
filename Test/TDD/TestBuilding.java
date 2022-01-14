@@ -29,4 +29,15 @@ public class TestBuilding {
 
         Assertions.assertEquals(resident2,b.getFirstResident());
     }
+
+    @Test
+    public void testGetMultibleResidents()
+    {
+        String resident = "hans";
+        String resident2 = "hans2";
+        String[] residents = {resident,resident2};
+        Building b = new Building(0,residents);
+
+        Assertions.assertEquals(resident,b.getFirstResident());
+    }
 }
