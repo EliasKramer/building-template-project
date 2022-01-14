@@ -50,4 +50,16 @@ public class TestBuilding {
 
         Assertions.assertEquals("hans2",b.getLastResident());
     }
+
+    @Test
+    public void testIfSamePersonCanMoveInTwice()
+    {
+        String resident = "hans";
+        Building b = new Building(0,resident);
+
+        Assertions.assertEquals(1,b.getResidentNumber());
+
+        b.AddResident("hans");
+        Assertions.assertEquals(1,b.getResidentNumber());
+    }
 }

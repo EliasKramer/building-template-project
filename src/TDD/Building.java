@@ -26,4 +26,8 @@ public class Building {
     {
         _residents.add(s);
     }
+    public int getResidentNumber()
+    {
+        return _residents.size();
+    }
 }
