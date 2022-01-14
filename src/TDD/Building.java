@@ -24,7 +24,10 @@ public class Building {
     }
     public void AddResident(String s)
     {
-        _residents.add(s);
+        if(!_residents.contains(s))
+        {
+            _residents.add(s);
+        }
     }
     public int getResidentNumber()
     {
